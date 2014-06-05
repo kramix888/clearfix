@@ -1,0 +1,35 @@
+.profile{
+	@include clearfix;
+	margin-bottom: 60px;
+}
+.profile-title{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #d8d8d8;
+
+}
+.profile-meta{
+	margin: 18px 0 15px;
+	font-family: 'Monst-regular';
+	color: #333131;
+}
+.profile-img{
+	text-align: center;
+	img{
+		display: inline-block;
+	}
+}
+.profile-body{
+	margin-top: 50px;
+	text-align: center;
+}
+@media #{$large}{
+
+.profile-img{
+	text-align: right;
+}
+.profile-body{
+	margin-top: 0;
+	text-align: left;
+}
+
+}

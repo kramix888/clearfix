@@ -1,0 +1,29 @@
+{% extends 'frontend/index-admin.html' %}
+
+{% block content %}
+
+<h2>ADD LIST</h2>
+
+  <form method="POST" data-abide>
+    <div class="name-field">
+      <label>NAME <small>required</small>
+        <input type="text" required pattern="[a-zA-Z]+" name="full_name">
+      </label>
+      <small class="error">Name is required and must be a string.</small>
+    </div>
+    <div class="position-field">
+      <label>Position <small>required</small>
+        <input type="text" required pattern="[a-zA-Z]+" name="position">
+      </label>
+      <small class="error">Position is required and must be a string.</small>
+    </div>
+    <div class="description-field">
+      <label>DESCRIPTION <small>required</small>
+        <input type="text" required name="description">
+      </label>
+      <small class="error">Dont forget to add some description.</small>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+{% endblock %}

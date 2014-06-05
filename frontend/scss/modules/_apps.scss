@@ -1,0 +1,75 @@
+.t-foot{
+	clear: both;
+	padding: 30px 20px 0;
+	display: block;
+	text-align: center;
+	.menu{
+
+		li{
+			margin-bottom: 15px;
+		}
+		a{
+			color: #fefefe;
+		}
+	}
+}
+.t-foot-logo{
+	margin-top: 0;
+	img{
+		width: 200px;
+	}
+}
+
+.page-title{
+	position: relative;
+	background: url('../../img/placeholder/title-bg.png') no-repeat;
+	background-size: cover;
+	background-position: center center;
+	
+	h1{
+		position: relative;
+		padding: 90px 0 80px;
+		margin: 0 0 0 0;
+		text-align: center;
+		color: #eeeeee;
+	}
+}
+// temporary classes
+.page-title-1{
+	background: url('../../img/placeholder/page-title2.png') no-repeat;
+	background-size: cover;
+
+}
+.page-title-2{
+	background: url('../../img/placeholder/map.png') no-repeat;
+	background-size: cover;
+
+}
+
+
+
+
+// responsive styles
+@media #{$medium}{
+	.t-foot{
+		text-align: left;
+		padding: 30px 20px;
+	}
+	.page-title{
+		h1{
+			margin: 0 0 0 50px;
+			text-align: left;
+		}
+	}
+}
+
+@media #{$large-up}{
+	.t-foot{
+		padding: 50px 20px;
+		.t-foot-logo{
+			margin-top: 53px;
+		}	
+	}
+
+}
+

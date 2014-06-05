@@ -1,0 +1,33 @@
+.post{
+	@include clearfix;
+	padding: 70px 0;
+	border-bottom: 1px solid #dedede;
+	margin-bottom: 80px;
+	text-align: center;
+}
+.post-title{
+	margin-bottom: 25px;
+	color: #4e4e4e;
+}
+.post-secondary{
+	padding: 50px 30px;
+}
+.post-spread{
+	border: 0;
+	margin-bottom: 20px;
+	.post-title{
+		color: #4e4e4e;
+		margin-bottom: 20px;
+	}
+	.post-img{
+		img{
+			width: 150px;
+		}
+	}
+}
+@media #{$large}{
+
+	.post{
+		text-align: left;
+	}
+}

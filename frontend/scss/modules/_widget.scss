@@ -1,0 +1,18 @@
+.widget{
+	margin-bottom: 50px;
+	padding: 0;
+	&:first-child{
+		margin-right: 40px;
+	}
+}
+
+.widget-title{
+	margin-bottom: 20px;
+
+}
+@media #{$large-up} { 
+	.widget{
+		margin: 0;
+	}
+
+}	

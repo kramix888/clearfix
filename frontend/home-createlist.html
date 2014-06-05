@@ -1,0 +1,64 @@
+{% extends 'frontend/index-admin.html' %}
+
+{% block content %}
+<!-- Slider -->
+<p></p>
+          <div class="flicker-slider-main" data-block-text="false">
+          <ul>
+            <li data-background="img/placeholder/slider1.png">
+              <div class="flick-text-cont layout right-triangle small-12 large-4 skin-primary">
+                <h1 class="layout-title">WE ARE CLEARFIX</h1>
+                <div class="layout-text">
+                  <p><a href="#" class="edit-btn" ><input type="image" src="img/icn_edit.png" title="Edit"></a>
+                  We do more than just fixing stuff. You have the freedom to customize and or simplify your ideas, thoughts and what is essential to your company and your target market. You specify, we simplify.
+                  </p>
+                </div>
+                <a href="/about" class="button warning">READ MORE</a>  
+              </div>
+            </li>
+            <li data-background="img/placeholder/slider3.png">
+              <div class="flick-text-cont layout right-triangle small-12 large-4 skin-primary">
+                <h1 class="layout-title">WE DESIGN</h1>
+                <div class="layout-text">
+                  <a href="#" class="edit-btn" ><input type="image" src="img/icn_edit.png" title="Edit"></a>
+                  <textarea readonly="true" border="none">
+                      Webpages, galleries, widgets, themes and everything under the sun.
+                  </textarea>
+                </div>
+                <a href="/about" class="button warning">READ MORE</a>  
+              </div>
+            </li> 
+            <li data-background="img/placeholder/slide2.png">
+              <div class="flick-text-cont layout right-triangle small-12 large-4 skin-primary">
+                <h1 class="layout-title">WE BUILD</h1>
+                <div class="layout-text">
+                  <a href="#" class="edit-s3" ><input type="image" src="img/icn_edit.png" title="Edit"></a>
+                  <div id="editS" contenteditable="true">
+                    <style scoped>
+                      #example-one { margin-bottom: 10px; }
+                      [contenteditable="true"] { padding: 10px; outline: 2px dashed #CCC; }
+                      [contenteditable="true"]:hover { outline: 2px dashed #0090D2; }
+                    </style>
+                    <p>Everything contained within this div is editable in browsers that support <code>HTML5</code>. Go on, give it a try: click it and start typing.</p>
+                  </div><!-- 
+                  <p><input type="image" src="img/icn_edit.png" title="Edit" onclick="edit" id="editS">
+                  Databases, platforms, web apps and tools that make your apps more user friendly making you, do most out of it and enjoying life as it should be.
+                  </p> -->
+                </div>
+                <a href="/about" class="button warning">READ MORE</a>  
+              </div>
+            </li>       
+          </ul> 
+        </div>
+<!-- end of Slider -->
+
+{% endblock %}
+
+{% block jsbottom %}
+<script type="text/javascript">
+  $(".edit-s3").click(function(e){
+        e.preventDefault();
+    });
+</script>
+
+{% endblock %}

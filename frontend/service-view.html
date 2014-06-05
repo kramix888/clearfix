@@ -1,0 +1,76 @@
+{% extends 'frontend/index-admin.html' %}
+
+{% block content %}
+<h4>EDIT ITEM</h4>
+
+<table class="table table-hover">
+  <thead> 
+    <tr> 
+        <th></th> 
+        <th>Title</th> 
+        <th>Description</th> 
+        <th>Created On</th>
+        <th>Actions</th> 
+        </tr> 
+  </thead>
+  <tbody>
+        <tr>
+            <td><input type="checkbox"></td> 
+            <td>wala pa ni</td> 
+            <td>wala pa ni</td> 
+            <td>1/1/2000001</td>
+            <td><a href=""><input type="image" src="img/icn_edit.png" title="Edit"></a> <a href=""><input type="image" src="img/icn_trash.png" title="Trash"></td></a>
+        </tr>
+  </tbody>
+</table>
+
+<h4>Web Design and Development</h4>
+
+<table class="table table-hover">
+  <thead> 
+    <tr> 
+        <th></th> 
+        <th>Title</th> 
+        <th>Description</th> 
+        <th>Created On</th>
+        <th>Actions</th> 
+        </tr> 
+  </thead>
+  <tbody>
+        {%for webdesign in web_design%}
+        <tr>
+            <td><input type="checkbox"></td> 
+            <td>{{ webdesign.title }}</td> 
+            <td>{{ webdesign.description }}</td> 
+            <td>{{ webdesign.created }}</td>
+            <td><a href=""><input type="image" src="img/icn_edit.png" title="Edit"></a> <a href=""><input type="image" src="img/icn_trash.png" title="Trash"></td></a>
+        </tr> 
+        {% endfor %}
+  </tbody>
+</table>
+
+<h4>Mobile Development</h4>
+
+<table class="table table-hover">
+  <thead> 
+    <tr> 
+        <th></th> 
+        <th>Title</th> 
+        <th>Description</th> 
+        <th>Created On</th>
+        <th>Actions</th> 
+        </tr> 
+  </thead>
+  <tbody>
+        {%for mobiledev in mobile_dev%}
+        <tr>
+            <td><input type="checkbox"></td> 
+            <td>{{ mobiledev.title }}</td> 
+            <td>{{ mobiledev.description }}</td> 
+            <td>{{ mobiledev.created }}</td>
+            <td><a href=""><input type="image" src="img/icn_edit.png" title="Edit"></a> <a href=""><input type="image" src="img/icn_trash.png" title="Trash"></td></a>
+        </tr> 
+        {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

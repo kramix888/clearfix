@@ -1,0 +1,197 @@
+{% extends 'frontend/index.html' %}
+
+{% block content %}
+
+<!-- slider -->
+      <div class="page-title">
+        <!-- <img src="img/placeholder/title-bg.png" alt=""> -->
+        <div class="overlay"></div>
+        <h1 class="t-huge">WORKS</h1>
+
+      </div>
+      <!-- slider-ends  -->
+      <!-- main-content starts -->
+      <div class="main-content">
+        <div class="group skin-sequence">
+        {%for portfolio in portfolios%}
+          <div class="group-item layout">
+            <div class="layout layout-right layout-inverse layout-featured small-12 large-8 columns">
+              <a href="#">      
+                <div class="overlay"></div>
+                <img src="img/placeholder/work1.png" alt="">
+              </a>   
+            </div>  
+            <div class="layout-left layout-inverse skin right-triangle small-12 large-4 columns">
+              <h1 class="layout-title">{{portfolio.title}}</h1>
+              <div class=" layout-text">
+                <p>
+                  {{portfolio.description}}
+                </p>
+              </div>
+              <a href="" class="button warning">READ MORE</a>            
+
+            </div>      
+          </div> 
+          {%endfor%}
+          <!-- <div class="group-item layout">
+            <div class="layout layout-right layout-inverse layout-featured small-12 large-8 columns">
+              <a href="#">      
+                <div class="overlay"></div>
+                <img src="img/placeholder/work2.png" alt="">
+              </a>
+            </div>            
+            <div class="layout-left layout-inverse skin right-triangle small-12 large-4 columns">
+              <h1 class="layout-title">THEME LOVE</h1>
+              <div class=" layout-text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                </p>
+              </div>
+              <a href="" class="button warning">READ MORE</a>            
+
+            </div>
+      
+          </div>             
+          <div class="group-item layout">
+            <div class="layout layout-right layout-inverse layout-featured small-12 large-8 columns">
+              <a href="#">      
+                <div class="overlay"></div>
+                <img src="img/placeholder/work3.png" alt="">
+              </a>
+            </div>            
+            <div class="layout-left layout-inverse skin right-triangle small-12 large-4 columns">
+              <h1 class="layout-title">MEXELINA</h1>
+              <div class=" layout-text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                </p>
+              </div>
+              <a href="" class="button warning">READ MORE</a>            
+
+            </div>
+      
+          </div>   
+          <div class="group-item layout">
+            <div class="layout layout-right layout-inverse layout-featured small-12 large-8 columns">
+              <a href="#">      
+                <div class="overlay"></div>
+                <img src="img/placeholder/work4.png" alt="">
+              </a>
+            </div>            
+            <div class="layout-left layout-inverse skin right-triangle small-12 large-4 columns">
+              <h1 class="layout-title">HAVOC</h1>
+              <div class=" layout-text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                </p>
+              </div>
+              <a href="" class="button warning">READ MORE</a>            
+
+            </div>
+      
+          </div>             
+          <div class="group-item layout">
+            <div class="layout layout-right layout-inverse layout-featured small-12 large-8 columns">
+              <a href="#">      
+                <div class="overlay"></div>
+                <img src="img/placeholder/work1.png" alt="">
+              </a>   
+            </div>  
+            <div class="layout-left layout-inverse skin right-triangle small-12 large-4 columns">
+              <h1 class="layout-title">AB</h1>
+              <div class=" layout-text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                </p>
+              </div>
+              <a href="" class="button warning">READ MORE</a>            
+
+            </div>      
+          </div> 
+          <div class="group-item layout">
+            <div class="layout layout-right layout-inverse layout-featured small-12 large-8 columns">
+              <a href="#">      
+                <div class="overlay"></div>
+                <img src="img/placeholder/work2.png" alt="">
+              </a>
+            </div>            
+            <div class="layout-left layout-inverse skin right-triangle small-12 large-4 columns">
+              <h1 class="layout-title">THEME LOVE</h1>
+              <div class=" layout-text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                </p>
+              </div>
+              <a href="" class="button warning">READ MORE</a>            
+
+            </div>
+      
+          </div>             
+          <div class="group-item layout">
+            <div class="layout layout-right layout-inverse layout-featured small-12 large-8 columns">
+              <a href="#">      
+                <div class="overlay"></div>
+                <img src="img/placeholder/work3.png" alt="">
+              </a>
+            </div>            
+            <div class="layout-left layout-inverse skin right-triangle small-12 large-4 columns">
+              <h1 class="layout-title">MEXELINA</h1>
+              <div class=" layout-text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                </p>
+              </div>
+              <a href="" class="button warning">READ MORE</a>            
+
+            </div>
+      
+          </div>   
+          <div class="group-item layout">
+            <div class="layout layout-right layout-inverse layout-featured small-12 large-8 columns">
+              <a href="#">      
+                <div class="overlay"></div>
+                <img src="img/placeholder/work4.png" alt="">
+              </a>
+            </div>            
+            <div class="layout-left layout-inverse skin right-triangle small-12 large-4 columns">
+              <h1 class="layout-title">HAVOC</h1>
+              <div class=" layout-text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                </p>
+              </div>
+              <a href="" class="button warning">READ MORE</a>            
+
+            </div>
+      
+          </div> -->
+          <div class="group-option">
+            <div class="row">
+              <ul class="inline-list group-pagination">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">></a></li>
+              </ul>
+            </div>
+          </div>  
+
+         
+      </div>
+     </div>
+    
+    <!-- main-content ends -->
+
+{% endblock %}
+
+
+
+    

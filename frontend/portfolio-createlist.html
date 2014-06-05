@@ -1,0 +1,23 @@
+{% extends 'frontend/index-admin.html' %}
+
+{% block content %}
+
+<h2>ADD LIST</h2>
+
+  <form method="POST" data-abide>
+    <div class="title-field">
+      <label>TITLE <small>required</small>
+        <input type="text" required pattern="[a-zA-Z]+" name="title">
+      </label>
+      <small class="error">Title is required and must be a string.</small>
+    </div>
+    <div class="description-field">
+      <label>DESCRIPTION <small>required</small>
+        <input type="text" required name="description">
+      </label>
+      <small class="error">Dont forget to add some description.</small>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+{% endblock %}

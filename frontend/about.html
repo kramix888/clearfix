@@ -1,0 +1,85 @@
+{% extends 'frontend/index.html' %}
+
+{% block content %}
+
+<!-- slider -->
+      <div class="page-title page-title-2">
+        <!-- <img src="img/placeholder/title-bg.png" alt=""> -->
+        <div class="overlay"></div>
+        <h1 class="t-huge">ABOUT</h1>
+
+      </div>
+      <!-- slider-ends  -->
+      <!-- main-content starts -->
+      <div class="main-content">
+        <div class="row">
+          <div class="large-9 large-centered columns">
+            <div class="post text-center">
+              <h1 class="post-title">Clearfix</h1>
+              <p>
+                We do more than just fixing stuff. You have the freedom to customize and or simplify your ideas, thoughts and what is essential to your company and your target market. You specify, we simplify. WE do more than just basically having the right answers at the right time. We go beyond what others might be providing. Negotiating and compromising is part of the daily grind but we promise to give you and your company tailor fitted ideas, start ups and traffic intended for your own type of market and the industry you belong to. 
+              </p>
+
+              <p>
+                Like us on Facebook and Tumblr and Follow us on Twitter!
+              </p>
+              <ul class="inline-list social social-secondary">
+                 <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                 <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                 <li><a href="#" class="tumblr"><i class="fa fa-tumblr"></i></a></li>
+              </ul> 
+            </div>
+
+        <!-- slider here -->
+        <div class="flicker-slider-tertiary" data-block-text="false">
+          <ul>
+{% for about in abouts %}
+            <li>
+              <div class="flicks-inner-content">
+                <div class="profile">
+                  <div class="profile-img large-4 columns">
+                    <img src="img/placeholder/about1.png" alt="">
+                  </div>
+                  <div class="profile-body large-7 columns">
+                    <h3 class="profile-title text-uppercase">{{ about.name }}</h3>
+                    <p class="profile-meta t-normal">{{ about.position }}</p>
+                    <p>
+                      {{ about.description }}
+                    </p>
+                    <div class="skill-level">
+                      <img src="img/placeholder/skill-level.png" alt="">
+                    </div>
+
+                  </div>
+                </div>
+               </div> 
+            </li>
+{% endfor %}
+            <!-- <li>
+              <div class="flicks-inner-content">
+                <div class="profile">
+                  <div class="profile-img large-4 columns">
+                    <img src="img/placeholder/about2.png" alt="">
+                  </div>
+                  <div class="profile-body large-7 columns">
+                    <h3 class="profile-title text-uppercase">STEVE JOE</h3>
+                    <p class="profile-meta t-normal">Web Programmer</p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation exercitation ullamco labo ullamco laborisx ea commodo consequat.veniam, quis nostrud exercitation exercitation.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco lab
+                    </p>
+                    <div class="skill-level">
+                      <img src="img/placeholder/skill-level.png" alt="">
+                    </div>
+
+                  </div>
+                </div>
+               </div> 
+            </li>           --></ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+    <!-- main-content ends -->
+
+{% endblock %}

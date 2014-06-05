@@ -1,0 +1,108 @@
+{% extends 'frontend/index.html' %}
+
+{% block content %}
+<!-- slider -->
+      <div class="page-title page-title-4">
+        <!-- <img src="img/placeholder/title-bg.png" alt=""> -->
+        <div class="overlay"></div>
+        <h1 class="t-huge">REQUEST A QUOTE</h1>
+
+      </div>
+      <!-- slider-ends  -->
+      <!-- main-content starts -->
+      <div class="main-content">
+        <div class="row">
+          <div class="large-8 large-centered columns">
+            <div class="post-tertiary rmove-style text-center copy-huge">
+              <p>
+                Now to get things started and done, we need to know more of your thoughts and needs. WE cater not only to the graphic part of your website but we also cater to the building blocks of it, its base and its platform. Please freely write down what you need from us and we will then schedule you for a teleconference with the other members of team and we are endeavoring a lifetime partnership with you.
+              </p>
+            </div>
+            <form action="/quote" class="form-inline" role="form" method="POST">
+              <div class="form">
+                <div class="row">
+                  <div class="large-6 columns">
+                      <input type="text" name="name" required="required" placeholder="Your Name*" />
+                  </div>
+                  <div class="large-6 columns">
+                      <input type="text" name="proj_title" placeholder="Project Title" />
+                  </div>
+                  <div class="large-6 columns">
+                      <input type="text" name="company" placeholder="Company" />
+                  </div>
+                  <div class="large-6 columns">
+                      <input type="text" name="country" required="required" placeholder="Country*" />
+                  </div>
+                  <div class="large-6 columns">
+                      <input type="text" name="phone" placeholder="Phone" />
+                  </div>
+                  <div class="large-6 columns">
+                      <input type="email" name="email" required="required" placeholder="Your Email*" />
+                  </div>          
+                </div>
+             </div>   
+
+              <div class="form">
+                <h4 class="form-title text-center">PROJECT REQUIREMENTS</h4>
+                  <div class="row">
+                    <div class="large-6 columns">
+                        <select name="service_type" required="required">
+                          <option value="">Select Services Do You Require</option>
+                          <option value="Advertising">ADVERTISING</option>
+                          <option value="Data Entry Job">DATA ENTRY JOB</option>
+                          <option value="Illustration">ILLUSTRATION</option>
+                          <option value="Logo Design">LOGO DESIGN</option>
+                          <option value="Mobile Application">MOBILE APPS</option>
+                          <option value="Tester">TESTER</option>
+                          <option value="UI Design">UI DESIGN</option>
+                          <option value="Web Design">WEB DESIGN</option>
+                          <option value="Web Programming">WEB PROGRAMMING</option>
+                          <option value="Others">OTHERS</option>
+                        </select>
+                    </div>       
+                    <div class="large-6 columns">
+                        <select name="web_type" required="required">
+                          <option value="">Select Type of Website</option>
+                          <option value="Blog">Blogs</option>
+                          <option value="Start-ups">Start Up Project</option>
+                          <option value="Portfolio">Portfolio Porject</option>
+                          <option value="Others">Others</option>
+                        </select>
+                    </div>  
+                    <div class="large-6 columns">
+                      <textarea placeholder="Competitor's Site" name="competitor_site"  rows="10"/></textarea>
+                    </div>
+                    <div class="large-6 columns">
+                      <textarea placeholder="Interesting Site" name="interest_site"  rows="10"/></textarea>
+                    </div>  
+                    <div class="large-12 columns">
+                      <textarea placeholder="Project Description" name="proj_desc" rows="10"/></textarea>
+                    </div>
+                    <div class="large-6 columns">
+                      <script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=6LcOVfQSAAAAANdyRjkzUtSRpBV_ApQjc_02DSZ3 ">
+                      </script>
+                      <noscript>
+                        <iframe src="http://www.google.com/recaptcha/api/noscript?k=6LcOVfQSAAAAANdyRjkzUtSRpBV_ApQjc_02DSZ3 "
+                        height="300" width="500" frameborder="0"></iframe><br>
+                        <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+                        </textarea>
+                        <input type="hidden" name="recaptcha_response_field"
+                        value="manual_challenge">
+                      </noscript>
+                    </div>
+                    <div class="large-12 columns">
+                      <input type="submit" class="button secondary big expand" value="SUBMIT"/>  
+                    </div>
+                  </div>                            
+                </div>                
+
+              </div>
+                          
+           </form>             
+          </div>          
+        </div>        
+
+
+      </div>
+    <!-- main-content ends
+{% endblock %}

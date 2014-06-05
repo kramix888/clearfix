@@ -1,0 +1,25 @@
+
+.tabs{
+	dd{
+		padding: 0;
+		a{
+			font-family: "Monst-regular";
+			font-size: 20px;
+			display: block;
+			padding: 13px;
+			text-align: center;
+			border-bottom: 1px solid #dedede;
+			background: none;
+			&:hover{
+				background: #FAFAFA;
+			}
+		}
+		&.active{
+			a{
+				background: $primary-color;
+				border-color: $primary-color;
+				color: #fff;
+			}
+		}
+	}
+}

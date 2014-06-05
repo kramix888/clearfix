@@ -1,0 +1,101 @@
+{% extends 'frontend/index-admin.html' %}
+
+{% block content %}
+
+<h2>EDIT ITEM</h2>
+
+<table class="table table-hover">
+  <thead> 
+    <tr> 
+        <th></th> 
+        <th>Title</th> 
+        <th>Description</th> 
+        <th>Created On</th>
+        <th>Actions</th> 
+        </tr> 
+  </thead>
+  <tbody>
+        {%for home in homes%}
+        <tr>
+            <td><input type="checkbox"></td> 
+            <td>{{ home.title }}</td> 
+            <td>{{ home.description }}</td>
+            <td>{{ home.created }}</td>
+            <td><a href="#" id="{{ home.id }}" class="edit-btn" ><input type="image" src="img/icn_edit.png" title="Edit"></a><a href=""><input type="image" src="img/icn_trash.png" title="Trash"></td></a>
+        </tr> 
+        {% endfor %}
+  </tbody>
+</table>
+
+<form method="EDIT" action="/myModal" name="edit">
+<div id="myModal" class="reveal-modal" data-reveal>
+  <form class="form-horizontal">
+                <div class="modal-header">
+                    <h4>EDIT</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="edit-name" class="col-lg-2 control-label">Title</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="title" placeholder="Title">
+                        </div>
+
+                        <div class="form-group">
+                        <label for="edit-description" class="col-lg-2 control-label">Description</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="description" placeholder="Description">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- <div class="modal-foorter">
+                    <a href="#" class="btn btn-default" data-dismiss="modal">SAVE</a>
+                    <a href="#" class="btn btn-primary" data-dismiss="modal">CLOSE</a>
+                </div> -->
+                <a href="#" class="button save-btn">SAVE</a>
+                <a class="close-reveal-modal">&#215;</a>
+            </form>
+</div>
+</form>
+
+{% endblock %}
+{% block jsbottom %}
+<script type="text/javascript">
+    $(".edit-btn").click(function(e){
+        e.preventDefault();
+        home_id = $(this).attr("id");
+        //alert(home_id);
+        $('#myModal').foundation('reveal', 'open');
+        $(".save-btn").attr("data-id", home_id)
+    });
+    $(".save-btn").click(function(e){
+        e.preventDefault();
+        home_id = $(this).attr("data-id");
+        
+        /*alert(home_id);*/
+        /*$.ajax({
+            type: 'EDIT',
+            url: '/dashboard-admin',
+            data: {'this_id': home_id},
+            dataType: 'json',
+            success: function(data){
+                alert("success");
+            }
+        });*/
+       console.log(home_id);
+       $.ajax({
+            type: 'POST',
+            url: '/dashboard-admin?this_id='+home_id,
+            dataType: "json",
+            success: function(ex){
+                window.location = "/dashboard-admin";
+                alert("Data deleted Successfully!");
+            },
+            error: function(ex){
+                alert("error");
+            }
+       });
+    });
+</script>
+
+{% endblock %}

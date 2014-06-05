@@ -1,0 +1,32 @@
+{% extends 'frontend/index-admin.html' %}
+
+{% block content %}
+
+<h2>EDIT ITEM</h2>
+
+<table class="table table-hover">
+  <thead> 
+    <tr> 
+        <th></th> 
+        <th>Name</th>
+        <th>Position</th> 
+        <th>Description</th> 
+        <th>Created On</th>
+        <th>Actions</th> 
+        </tr> 
+  </thead>
+  <tbody>
+        {%for about in abouts%}
+        <tr>
+            <td><input type="checkbox"></td> 
+            <td>{{ about.name }}</td>
+            <td>{{ about.position }}</td> 
+            <td>{{ about.description }}</td> 
+            <td>{{ about.created }}</td>
+            <td><a href=""><input type="image" src="img/icn_edit.png" title="Edit"></a> <a href=""><input type="image" src="img/icn_trash.png" title="Trash"></td></a>
+        </tr> 
+        {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
