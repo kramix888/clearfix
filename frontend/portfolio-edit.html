@@ -21,10 +21,58 @@
             <td>{{ portfolio.title }}</td> 
             <td>{{ portfolio.description }}</td> 
             <td>{{ portfolio.created }}</td>
-            <td><a href=""><input type="image" src="img/icn_edit.png" title="Edit"></a> <a href=""><input type="image" src="img/icn_trash.png" title="Trash"></td></a>
+            <td><a href=""><input type="image" src="img/icn_edit.png" title="Edit"></a> <a href="#" class="del-btn" id="{{ portfolio.id }}"><input type="image" src="img/icn_trash.png" title="Trash"></td></a>
         </tr> 
         {% endfor %}
   </tbody>
 </table>
 
+
+<form class="del_conf" method="DELETE">
+    <center>
+        <div style="width: 50%" id="deleteModal" class="reveal-modal" data-reveal>
+            <div class="modal-header">
+                <h4>DELETE.</h4>
+            </div>
+            <div class="modal-body">
+                <p>ARE YOU SURE YOU WANT TO DELETE?</p>
+            </div>
+            <div align="right"><a href="#" class="button btn-ok">OK</a></div>
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+    </center>
+</form>
+{% endblock %}
+
+{% block jsbottom %}
+<script type="text/javascript">
+    //DELETE MODAL
+
+    $(".del-btn").click(function(e){
+        e.preventDefault();
+        portfolio_id = $(this).attr("id");
+        
+        $('#deleteModal').foundation('reveal', 'open');
+        $(".btn-ok").attr("data-id", portfolio_id)
+    });
+
+    $(".btn-ok").click(function(e){
+        e.preventDefault();
+        portfolio_id = $(this).attr("data-id");
+
+       $.ajax({
+            type: 'DELETE',
+            url: '/portfolio-edit?this_id='+portfolio_id,
+            dataType: "json",
+            success: function(ex){
+                alert("Data deleted Successfully!");
+            },
+            error: function(ex) {
+                window.location = "/portfolio-edit"
+                $('#deleteModal').foundation('reveal', 'close');
+            }
+       });
+
+    });
+</script>
 {% endblock %}

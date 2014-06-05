@@ -426,8 +426,8 @@ class LoginPage(BaseHandler):
         if self.request.get('email') and self.request.get('password'):
             email = self.request.get('email').strip().lower()
             password = self.request.get('password')
-            user = User.get_by_id('email')
-
+            user = User.get_by_id(self.request.get("email"))
+            
             if not user:
                 self.redirect(self.uri_for('www-login', error="User not found. Please try another email or register."))
                 return
@@ -568,10 +568,17 @@ class AdminDashboardPage(BaseHandler):
     def post(self):
         home_id = self.request.get("this_id")
         newHome = Home.get_by_id(int(home_id))
-        newHome.title = self.request.get("title").strip()
-        newHome.description = self.request.get("description").strip()
-        newHome.put()
+        # newHome.title = self.request.get("title").strip()
+        # newHome.description = self.request.get("description").strip()
+        logging.critical("title: "+self.request.get("editTitle").strip()+"----------------------------")
+        logging.critical("description: "+self.request.get("title").strip()+"----------------------------")
+        #newHome.put()
         self.redirect(self.uri_for('www-dashboard-admin'))
+    @login_required
+    def delete(self):
+        home_id = self.request.get("this_id")
+        home_id = Home.get_by_id(int(home_id))
+        home_id.key.delete()
 class HomeCreatePage(BaseHandler):
     @login_required
     def get(self):
@@ -605,6 +612,11 @@ class PortfolioEditPage(BaseHandler):
             self.tv["portfolios"].append(this_data.to_object())
         self.tv["current_page"] = "EDIT PORTFOLIO"
         self.render('frontend/portfolio-edit.html')
+    @login_required
+    def delete(self):
+        portfolio_id = self.request.get("this_id")
+        portfolio_id = Portfolio.get_by_id(int(portfolio_id))
+        portfolio_id.key.delete()
 class AboutCreatePage(BaseHandler):
     @login_required
     def get(self):        
